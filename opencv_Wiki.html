@@ -7,25 +7,88 @@
 <h1>Table of content</h1>
 <ol>
 	<li><a href="#"></a></li>
-	<li><a href="#Import_Image">Import(Read) Image</a></li>
-	<li><a href="#Show_Image">Show Image</a></li>
-	<li><a href="#Save_Image">Save Image</a></li>
+	<li><a href="#Image">Work With Images</a></li>
+	<li><a href="#Video">Work With Video</a></li>
+	<li><a href="#UserInteraction">User Interaction</a></li>
+	<li><a href="#Filters">Filters</a></li>
 
+	<li><a href="#"></a></li>
+	
 </ol>
 <hr>
 <h1 id=""></h1>
 
 <hr>
 
-<h1 id="Import_Image">Import(Read) Image</h1>
+<h1 id="Image">Import(Read) Image</h1>
+<ul>
+	<li><h3>Import or load image</h3><br>
+		img = cv2.imread('photo.jpeg', cv2.IMREAD_GRAYSCALE)
+		<br>
+		img = cv2.imread('photo.jpeg', cv2.IMREAD_COLOR)
 
+	</li>
+	<li><h3>Show image</h3><br>
+		cv2.imshow('image', img)
+	</li>
+	<li><h3>Save Image</h3><br>
+
+	</li>
+	<li><h3><br></h3></li>
+
+</ul>
 <hr>
 
-<h1 id="Show_Image">Show Image</h1>
-
+<h1 id="Video">Working With Video</h1>
+<ul>
+	<li><h3>Access to video cam</h3><br>
+		cap = cv2.VideoCapture(0)<br>
+		ret, frame = cap.read()<br>
+		cap.release()
+	</li>
+	<li><h3>Save Video</h3></li>
+	<li><h3>Grayscale conversion</h3><br>
+		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+	</li>
+	<li><h3>Replace one part of picture:</h3><br>
+		subimg = gray[50:430, 50:590]<br>
+        frame[50:430, 50:590] = subimg
+	</li>
+</ul>
 <hr>
+<h1 id="UserInteraction">User Interaction</h1>
+<ul>
+	<li><h3>Get Key Value:</h3><br>
+		k = cv2.waitKey(33)<br>
+		if k == ord('a')<br>
+		if k == 43
+	</li>
+	<li><h3></h3></li>
+	<li><h3></h3></li>
 
-<h1 id="Save_Image">Save Image</h1>
+</ul>
+<hr>
+<h1 id="Filters">Filters</h1>
+<ul>
+	<li><h3>Gaussian:</h3><br>
+		gaus_filt = cv2.GaussianBlur(frame,(filt_value,filt_value),3)	
+	</li>
+	<li><h3>Vertical Sobel</h3><br>
+		sobel_filt = cv2.Sobel(frame,cv2.CV_64F, 1, 0, ksize=filt_value)
+	</li>
+	<li><h3>Horizental Sobel</h3><br>
+		sobel_filt = cv2.Sobel(frame,cv2.CV_64F, 0, 1, ksize=filt_value)
+	</li>
+	<li><h3>binary Threshold</h3><br>
+		maxValue = 255<br>
+        binTher_filt1,binTher_filt2 = cv2.threshold(frame, filt_value, maxValue, cv2.THRESH_BINARY)
+	</li>
+	<li><h3></h3></li>
+
+
+</ul>
+<hr>
+<h1 id=""></h1>
 
 <hr>
 </body>

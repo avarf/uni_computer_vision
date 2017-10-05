@@ -1,0 +1,38 @@
+\documentclass[•]{article}
+\usepackage{inputenc}
+
+\title{}
+\author{}
+
+\begin{document}
+
+\begin{center}
+\textbf{Mohammadali Varfan}\\
+\textbf{9026853}\\
+\hfill \break
+\hfill \break
+{\huge Human Detection Using Thermal Camera}\\
+\end{center}
+\hfill \break
+\hfill \break
+
+
+\section{Introduction(topic, context, motivation)}
+Using thermal camera can answer many of our needs in different fields such as survielance and human-robot interaction especially in the low or no light conditions. For most of these tasks we first need to detect the human in the environment and beacuse of this I chose to do the human detection using thermal camera.\\
+\\For solving this problem I should detect humans from other heat sources in an environment using a thermal camera.
+\section{Material And Methods}
+The data for this projet consists of frames from a thermal camera from a test environment with some human and non-human objects in the environment.\\
+\\For this project first we need to detect all objecs in the foreground and for this I will apply background subtraction, adaptive background subtraction algorithm[1] and different algorithms such as blob detection, contour detection[2], contour findings and HOG(Histograms of Oriented Gradients)[3].\\
+\\After detecting objects in the foreground I will use a machine learning techniques such as SVM[4, 5], artificial neural networks such as convolution neural network[6] or other classifiers for classifing all the objects and heat sources into two classes of humans and non-humans.
+
+\section{Anticipated Results}
+One problem that I may face is the heat reflection. Some materials reflect heat and they act as a mirror for infrared waves and this can affect the output of my project and I should answer this problem in the project.\\
+\\Next challenge in this project can be that the clothes which different persons are wearing may block or decrease the radiated heat from their bodies and this may affect the result of the classifier and I should answer this problem in the project.
+\section{References}
+[1] Khandhediya, Yash, Karishma Sav, and Vandit Gajjar. "Human Detection for Night Surveillance using Adaptive Background Subtracted Image." arXiv preprint arXiv:1709.09389 (2017).\\
+\\{[2]} Davis, James W., and Vinay Sharma. "Robust Background-Subtraction for Person Detection in Thermal Imagery." In CVPR Workshops, p. 128. 2004\\
+\\ {[3]} Suard, Frédéric, Alain Rakotomamonjy, Abdelaziz Bensrhair, and Alberto Broggi. "Pedestrian detection using infrared images and histograms of oriented gradients." In Intelligent Vehicles Symposium, 2006 IEEE, pp. 206-212. IEEE, 2006.\\
+\\ {[4]} Bertozzi, Massimo, Alberto Broggi, Mike Del Rose, Mirko Felisa, Alain Rakotomamonjy, and Frédéric Suard. "A pedestrian detector using histograms of oriented gradients and a support vector machine classifier." In Intelligent Transportation Systems Conference, 2007. ITSC 2007. IEEE, pp. 143-148. IEEE, 2007.\\
+\\{[5]} Xu, Fengliang, Xia Liu, and Kikuo Fujimura. "Pedestrian detection and tracking with night vision." IEEE Transactions on Intelligent Transportation Systems 6, no. 1 (2005): 63-71.\\
+\\{[6]} Tomè, Denis, Federico Monti, Luca Baroffio, Luca Bondi, Marco Tagliasacchi, and Stefano Tubaro. "Deep convolutional neural networks for pedestrian detection." Signal Processing: Image Communication 47 (2016): 482-489.
+\end{document}

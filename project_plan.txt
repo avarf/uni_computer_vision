@@ -1,0 +1,7 @@
+crop and resize picture to standard size =>
+calculate the gradient image( we can do this by using soble filter two times with kernel size of "1" and save the result) =>
+calculate the magnitude and orientation of the gradient(
+mag, angle = cv2.cartToPolar(gx, gy, angleInDegrees=True)
+) =>
+calculate HOG in 8*8 cells
+
